@@ -1,4 +1,0 @@
-# base packages
-python==2.7.11
-ipython>=4.0.1
-pip>=2.8.2

@@ -1,15 +1,14 @@
 SHELL := $(shell which bash)
 PROJECT := phonelocator
-ACTIVATE_VENV = source activate ${PROJECT}
-TEST_MARKS := "slow" 
-CONDA_REQS := "conda-requirements.txt"
-PIP_REQS := "pip-requirements.txt"
-TEST_REQS := "test-requirements"
+ACTIVATE_VENV = source venv/bin/activate
+TEST_MARKS := integration
+PIP_REQS := "requirements.txt"
+TEST_REQS := "test-requirements.txt"
+
 
 setup:
-	-conda create -n ${PROJECT} ipython
+	@if [ ! -d "venv" ]; then virtualenv venv; fi
 	${ACTIVATE_VENV} && \
-	  conda install --file ${CONDA_REQS} && \
 	  pip install -r ${PIP_REQS}
 
 test-setup: setup
