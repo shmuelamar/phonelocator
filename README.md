@@ -1,14 +1,17 @@
-#Phone Locator
+# Phone Locator
 *Author: Shmuel Amar*
 
-#Installation
+example project, use at your own risk (MIT license)
+
+
+## Installation
 to install phone locator run:
 
 ```
 make setup
 ```
 
-#Running Tests
+## Running Tests
 
 ```
 make test-setup
@@ -16,7 +19,7 @@ make test
 make test-full  # full tests including live http server
 ```
 
-#Example Usage
+## Example Usage
 running the webserver
 
 ```
